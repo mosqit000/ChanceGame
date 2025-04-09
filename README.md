@@ -16,3 +16,4 @@ The solution contains 2 projects:
    7. Postman collection uploaded.
 2. Unit tests: TestChanceGame
    1. Contains unit tests for the main project.
+3. To access the place bet API, you will need to call the /login API first, with the suitable username adn password to have a JWT, which you will use as a Bearer token in the next API (/placeBet API), or you will get an unautorized error.
