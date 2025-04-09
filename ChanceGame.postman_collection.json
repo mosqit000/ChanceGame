@@ -1,0 +1,76 @@
+{
+	"info": {
+		"_postman_id": "f04029bc-4204-4c72-9502-90bb26a65f76",
+		"name": "ChanceGame",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21293232"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"hannibal\",\r\n    \"password\":\"hannibal\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5073/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5073",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "place bet",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiaGFubmliYWwiLCJleHAiOjE3NDQyMDc3MTQsImlzcyI6ImFtZXJqYXJhZGVoMUBnbWFpbC5jb20iLCJhdWQiOiJ0aGVBdGVhbUBnbWFpbC5jb20ifQ.FBmAUSOK0B0bMPHtZHxrrvv-Si3L5nlXSy3VWBUo__M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"points\":200,\r\n    \"number\":2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5073/placebet",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5073",
+					"path": [
+						"placebet"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
